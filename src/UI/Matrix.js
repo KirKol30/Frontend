@@ -1,25 +1,22 @@
 import React from "react";
-import Element from "./Element";
-class Matrix extends React.Component{
-       
-    constructor(props){
-        super(props)
-        this.state={i:3,j:3, m:[]}
-
-        
-    } 
+import Str from "./str";
+function Matrix(props) {
+    const colum=[];
+    const mass=[];
+    const savingstr=(elstr)=>
+    {
+        mass.push(elstr);
+    }
     
-    render(){
-       
-            return(
-                <div>
-                    <Element /*id={str+stl} /*onAdd={this.addElement}*//>
-                </div>  
-            )
-            }
-
-    /*addElement(){
-        console.log.user
-      } */
+    for( let i=0; i<props.colum_size; i++){
+        colum.push(<Str str_size= {props.str_size} j={i} onSaveStr={savingstr} />)    
+    }
+    if(props.colum_size<6 && props.str_size<6){
+         return(
+        <div className="strings">
+            {colum}
+        </div>
+    )}
+   
 }
 export default Matrix

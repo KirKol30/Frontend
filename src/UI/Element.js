@@ -1,25 +1,23 @@
-import React from "react";
+
+import React, {useState} from "react";
 // import Matrix from "./Matrix"; 
 
-class Element extends React.Component{
-    el = this.props.el
-    constructor(props) {
-        super(props)
-        this.state = {
-            numb: 0,
-            id: 0 
-        }
+const Element=(props)=>{
+    const id_el=props.id_el
+    const [numb, setNumb]=useState('');
+    const numbChangeHandler=(event)=>{
+        setNumb(event.target.value)
+       props.onSaveDate(numb);
+        
+       
     }
     
-    render(){
-
-        return(
-            <form>
-                <input type='number' el='' onChange={(e)=> this.setState({numb: e.target.value }) /*this.props.onAdd({
-                    el: this.state.el})*/} />
-            </form>    
-        )
-    }
+    return(
+        <form >
+            <input className="matrix" type='number'  onChange={numbChangeHandler} /*this.props.onAdd({
+                el: this.state.el})*/ />
+        </form>    
+    )
 }
 
 export default Element
