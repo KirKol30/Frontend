@@ -3,18 +3,26 @@ import Str from "./str";
 function Matrix(props) {
     const colum=[];
     const mass=[];
-    const savingstr=(elstr)=>
+    for(let i=0; i<props.colum_size; i++){
+        mass[i]=0
+    }
+    const savingstr=(elstr, id)=>
     {
-        mass.push(elstr);
+        mass[id]=elstr;
+        
+    }
+    const saver=()=>{
+        props.onsaver(mass)
     }
     
     for( let i=0; i<props.colum_size; i++){
-        colum.push(<Str str_size= {props.str_size} j={i} onSaveStr={savingstr} />)    
+        colum.push(<Str str_size= {props.str_size} id_c={i} onSaveStr={savingstr} newsave={saver} />)    
     }
     if(props.colum_size<6 && props.str_size<6){
          return(
         <div className="strings">
             {colum}
+            
         </div>
     )}
    

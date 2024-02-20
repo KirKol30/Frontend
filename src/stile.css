@@ -24,16 +24,26 @@ aside form input, aside form button{
     background:  #222;
 }
 .string_css{
-	float: left;
+	
     padding: 5px;
-
+    margin-top: 30px;
     
 }
-.matrix{
+.element{
+    float: left;
     width: 60px;
     height: 20px;
     border-radius: 15px;
     background-color: Snow;
+}
+.inputel{
+    margin: 10px;
+    font:3px;
+    width: 90px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: Snow;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 .inputNlarge{
     font:3px;
@@ -50,7 +60,7 @@ aside form input, aside form button{
     height: 40px;
 }
 .strings{
-    background-color: #8e9cdb;
+
      border-radius: 15px;
     margin-left: 60px;
     margin-top: 100px;

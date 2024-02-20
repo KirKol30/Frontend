@@ -7,14 +7,14 @@ const Element=(props)=>{
     const [numb, setNumb]=useState('');
     const numbChangeHandler=(event)=>{
         setNumb(event.target.value)
-       props.onSaveDate(numb);
-        
+       props.onSaveDate(event.target.value, id_el);
+        props.onsavesaver();
        
     }
     
     return(
         <form >
-            <input className="matrix" type='number'  onChange={numbChangeHandler} /*this.props.onAdd({
+            <input className="element" type='number'  onChange={numbChangeHandler} /*this.props.onAdd({
                 el: this.state.el})*/ />
         </form>    
     )
