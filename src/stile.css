@@ -46,24 +46,60 @@ aside form input, aside form button{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 .inputNlarge{
+    margin: left 20px;
     font:3px;
-    width: 90px;
+    width: 110px;
     height: 30px;
     border-radius: 15px;
     background-color: Snow;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 .inputNlargeall{
+    margin-left: 60px;
+    margin-top: 100px;
     border-radius: 15px;
     background-color: #8e9cdb;
-    width: 210px;
+    width: 700px;
     height: 40px;
 }
 .strings{
 
-     border-radius: 15px;
+    border-radius: 15px;
     margin-left: 60px;
     margin-top: 100px;
     width: auto;
     height: auto;
+}
+.buttons{
+    margin-top: 5px;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    background-color:  #d2d4e0;
+}
+.app{
+    
+    margin-top: 10px;
+}
+.matrix{
+    float: left;
+}
+.textW{
+    float: left;
+    
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+}
+.formNL{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.formM{
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    
 }
